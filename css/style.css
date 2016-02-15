@@ -1,0 +1,9 @@
+body .jumbotron {
+    background: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.jumbotron p a {
+    margin-bottom: 10px;
+}
