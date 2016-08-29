@@ -7,3 +7,7 @@ body .jumbotron {
 .jumbotron p a {
     margin-bottom: 10px;
 }
+
+td {
+    vertical-align: top;
+}
