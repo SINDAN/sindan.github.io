@@ -1,0 +1,23 @@
+doctype html
+html lang="ja"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content="SINDAN Project"
+
+    title
+      - unless current_page.data.title.nil?
+        = current_page.data.title + " | "
+      | SINDAN Project
+
+    = stylesheet_link_tag :bootstrap, :site
+    = javascript_include_tag 'jquery-2.2.0.min', :bootstrap, :all
+
+  body class="#{ page_classes }"
+    == partial "layouts/_header"
+
+    .container
+      = yield
+
+    == partial "layouts/_footer"
