@@ -43,5 +43,11 @@ configure :build do
   # activate :minify_javascript
 end
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :rsync
+  deploy.host          = 'www.sindan-net.com'
+  deploy.path          = '/var/www/www.sindan-net.com'
+end
+
 # slim
 Slim::Engine.set_options pretty: true
