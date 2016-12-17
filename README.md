@@ -22,6 +22,7 @@ $ bundle exec middleman server
 
 ## Deploy
 - deploy
+    - git push origin gh-pages
 ```
 $ bundle exec middleman deploy
 ```

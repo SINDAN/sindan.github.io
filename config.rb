@@ -44,9 +44,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method = :rsync
-  deploy.host          = 'www.sindan-net.com'
-  deploy.path          = '/var/www/www.sindan-net.com'
+  deploy.deploy_method = :git
 end
 
 # slim
