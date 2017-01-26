@@ -42,12 +42,42 @@
           </p>
         </center>
       </div>
-      <h2 class="page-header" id="about">
-        About
+      <h2 class="page-header" id="product_overview">
+        Overview
       </h2>
-      <h2 class="page-header" id="about">
-        Products
+      <p></p>
+      Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
+      <h2 class="page-header" id="agent">
+        診断ノード
       </h2>
+      <p></p>
+      診断ノードは、下記のプラットフォームで動作します。
+      <ul>
+        <li>
+          Raspberry PI(ver.1 - ver.3)
+        </li>
+        <li>
+          Linux(Debian / Ubuntu)
+        </li>
+        <li>
+          Windows7/8/10(PowerShell 実行環境が必要です)
+        </li>
+        <li>
+          MacOS X
+        </li>
+        <li>
+          Android(開発中)
+        </li>
+      </ul>
+      <p></p>
+      Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
+      <h2 class="page-header" id="agent">
+        収集・可視化サーバ
+      </h2>
+      <p></p>
+      本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
+      <p></p>
+      収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
     </div>
     <footer>
       <hr />
