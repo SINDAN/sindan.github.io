@@ -78,6 +78,65 @@
       本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
       <p></p>
       収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
+      <h2 class="page-header" id="agent">
+        使い方
+      </h2>
+      <p></p>
+      システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
+      <h4 class="page-header" id="agent">
+        収集・可視化サーバのセットアップ(docker 版)
+      </h4>
+      <h4 class="page-header" id="agent">
+        診断ノードのセットアップ(Raspberry PI 版)
+      </h4>
+      <h5 class="page-header" id="agent">
+        イメージ取得・書き込み
+      </h5>
+      <p></p>
+      下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、<zip>ファイルを解凍してください。</zip>書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば<a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>などが利用できます。
+      <h5 class="page-header" id="agent">
+        設定
+      </h5>
+      <p></p>
+      イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。その中の /etc フォルダに設定ファイルがあります。
+      <ul>
+        <li>
+          sindan.conf
+        </li>
+        <ul>
+          <li>
+            sindan.sh用の設定ファイル
+          </li>
+        </ul>
+        <li>
+          wpa_supplicant.conf
+        </li>
+        <ul>
+          <li>
+            測定する ssid の設定ファイル
+          </li>
+        </ul>
+        <li>
+          crontab
+        </li>
+      </ul>
+      <h2 class="page-header" id="agent">
+        ダウンロード
+      </h2>
+      <h4 class="page-header" id="agent">
+        収集・可視化サーバ Docker イメージ
+      </h4>
+      <h4 class="page-header" id="agent">
+        Raspberry PI bootable イメージ
+      </h4>
+      <p></p>
+      bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
+      <p></p>
+      <a href="./data/raspbian/sindan-20170310.img.zip">2017/3/10版</a>
+      <p></p>
+      <a href="./data/raspbian/sindan-20160905.img.zip">2016/9/5版</a>
+      <p></p>
+      <a href="./data/raspbian/sindan-20160714.img.zip">2016/7/14版</a>
     </div>
     <footer>
       <hr />
