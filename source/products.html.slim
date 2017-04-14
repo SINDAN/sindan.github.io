@@ -2,80 +2,76 @@
 title: Products
 ---
 
-.jumbotron.text-center
-  h1 SINDAN Project
-  center
-    p.location
-      | Simple Integrated Network Diagnosis And Notification
-
 h2#product_overview.page-header Overview
 p
-| Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
+  | Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
 
 h2#agent.page-header 診断ノード
 p
-| 診断ノードは、下記のプラットフォームで動作します。
+  | 診断ノードは、下記のプラットフォームで動作します。
 ul
-	li Raspberry PI(ver.1 - ver.3)
-	li Linux(Debian / Ubuntu)
-	li Windows7/8/10(PowerShell 実行環境が必要です)
-	li MacOS X
-	li Android(開発中)
+  li Raspberry PI(ver.1 - ver.3)
+  li Linux(Debian / Ubuntu)
+  li Windows7/8/10(PowerShell 実行環境が必要です)
+  li MacOS X
+  li Android(開発中)
 
 p
-| Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
+  | Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
 
 
 h2#agent.page-header 収集・可視化サーバ
 p
-| 本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
+  | 本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
 
 p
-| 収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
+  | 収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
 
 h2#agent.page-header 使い方
 p
-|システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
+  |システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
 
-h4#agent.page-header 収集・可視化サーバのセットアップ(docker 版)
+h3#agent.page-header 収集・可視化サーバのセットアップ(docker 版)
 
-h4#agent.page-header 診断ノードのセットアップ(Raspberry PI 版)
+h3#agent.page-header 診断ノードのセットアップ(Raspberry PI 版)
 
-h5#agent.page-header イメージ取得・書き込み
+h4#agent.page-header イメージ取得・書き込み
 p
-|下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、
-zip ファイルを解凍してください。
-|書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。
-|ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば
-a href="https://sourceforge.net/projects/win32diskimager/" Win32 Disk Imager
-|などが利用できます。
+  |下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、
+  | zip ファイルを解凍してください。
+  | 書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。
+  | ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば
+  a href="https://sourceforge.net/projects/win32diskimager/" Win32 Disk Imager
+  | などが利用できます。
 
-h5#agent.page-header 設定
+h4#agent.page-header 設定
 p
-|イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。
-|その中の /etc フォルダに設定ファイルがあります。
+  | イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。
+  | その中の /etc フォルダに設定ファイルがあります。
 
 ul
-	li sindan.conf
-	ul
-		li sindan.sh用の設定ファイル
-	li wpa_supplicant.conf
-	ul
-		li 測定する ssid の設定ファイル
-	li crontab
+  li
+    | sindan.conf
+    ul
+      li sindan.sh用の設定ファイル
+  li
+    | wpa_supplicant.conf
+    ul
+      li 測定する ssid の設定ファイル
+  li crontab
 
 
 h2#agent.page-header ダウンロード
 
-h4#agent.page-header 収集・可視化サーバ Docker イメージ
+h3#agent.page-header 収集・可視化サーバ Docker イメージ
 
-h4#agent.page-header Raspberry PI bootable イメージ
+h3#agent.page-header Raspberry PI bootable イメージ
 p
-| bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
-p
-a href="./data/raspbian/sindan-20170310.img.zip" 2017/3/10版
-p
-a href="./data/raspbian/sindan-20160905.img.zip" 2016/9/5版
-p
-a href="./data/raspbian/sindan-20160714.img.zip" 2016/7/14版
-
+  | bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
+ul
+  li
+    a href="./data/raspbian/sindan-20170310.img.zip" 2017/3/10版
+  li
+    a href="./data/raspbian/sindan-20160905.img.zip" 2016/9/5版
+  li
+    a href="./data/raspbian/sindan-20160714.img.zip" 2016/7/14版
