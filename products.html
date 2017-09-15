@@ -32,26 +32,18 @@
       </div>
     </nav>
     <div class="container">
-      <div class="jumbotron text-center">
-        <h1>
-          SINDAN Project
-        </h1>
-        <center>
-          <p class="location">
-            Simple Integrated Network Diagnosis And Notification
-          </p>
-        </center>
-      </div>
       <h2 class="page-header" id="product_overview">
         Overview
       </h2>
-      <p></p>
-      Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
+      <p>
+        Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
+      </p>
       <h2 class="page-header" id="agent">
         診断ノード
       </h2>
-      <p></p>
-      診断ノードは、下記のプラットフォームで動作します。
+      <p>
+        診断ノードは、下記のプラットフォームで動作します。
+      </p>
       <ul>
         <li>
           Raspberry PI(ver.1 - ver.3)
@@ -69,53 +61,59 @@
           Android(開発中)
         </li>
       </ul>
-      <p></p>
-      Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
+      <p>
+        Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
+      </p>
       <h2 class="page-header" id="agent">
         収集・可視化サーバ
       </h2>
-      <p></p>
-      本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
-      <p></p>
-      収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
+      <p>
+        本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
+      </p>
+      <p>
+        収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
+      </p>
       <h2 class="page-header" id="agent">
         使い方
       </h2>
-      <p></p>
-      システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
-      <h4 class="page-header" id="agent">
+      <p>
+        システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
+      </p>
+      <h3 class="page-header" id="agent">
         収集・可視化サーバのセットアップ(docker 版)
-      </h4>
-      <h4 class="page-header" id="agent">
+      </h3>
+      <h3 class="page-header" id="agent">
         診断ノードのセットアップ(Raspberry PI 版)
-      </h4>
-      <h5 class="page-header" id="agent">
+      </h3>
+      <h4 class="page-header" id="agent">
         イメージ取得・書き込み
-      </h5>
-      <p></p>
-      下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、<zip>ファイルを解凍してください。</zip>書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば<a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>などが利用できます。
-      <h5 class="page-header" id="agent">
+      </h4>
+      <p>
+        下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、zip ファイルを解凍してください。書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば<a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>などが利用できます。
+      </p>
+      <h4 class="page-header" id="agent">
         設定
-      </h5>
-      <p></p>
-      イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。その中の /etc フォルダに設定ファイルがあります。
+      </h4>
+      <p>
+        イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。その中の /etc フォルダに設定ファイルがあります。
+      </p>
       <ul>
         <li>
           sindan.conf
+          <ul>
+            <li>
+              sindan.sh用の設定ファイル
+            </li>
+          </ul>
         </li>
-        <ul>
-          <li>
-            sindan.sh用の設定ファイル
-          </li>
-        </ul>
         <li>
           wpa_supplicant.conf
+          <ul>
+            <li>
+              測定する ssid の設定ファイル
+            </li>
+          </ul>
         </li>
-        <ul>
-          <li>
-            測定する ssid の設定ファイル
-          </li>
-        </ul>
         <li>
           crontab
         </li>
@@ -123,20 +121,20 @@
       <h2 class="page-header" id="agent">
         ダウンロード
       </h2>
-      <h4 class="page-header" id="agent">
+      <h3 class="page-header" id="agent">
         収集・可視化サーバ Docker イメージ
-      </h4>
-      <h4 class="page-header" id="agent">
+      </h3>
+      <h3 class="page-header" id="agent">
         Raspberry PI bootable イメージ
-      </h4>
+      </h3>
       <p></p>
       bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
-      <p></p>
-      <a href="./data/raspbian/sindan-20170310.img.zip">2017/3/10版</a>
-      <p></p>
-      <a href="./data/raspbian/sindan-20160905.img.zip">2016/9/5版</a>
-      <p></p>
-      <a href="./data/raspbian/sindan-20160714.img.zip">2016/7/14版</a>
+      li
+        a href="./data/raspbian/sindan-20170719.img.zip" 2017/7/19版
+      li
+        a href="./data/raspbian/sindan-20170621.img.zip" 2017/6/21版
+      li
+        a href="./data/raspbian/sindan-20170310.img.zip" 2017/3/10版
     </div>
     <footer>
       <hr />
