@@ -33,6 +33,28 @@ p
 
 h3#agent.page-header 収集・可視化サーバのセットアップ(docker 版)
 
+h4#agent.page-header ダウンロード
+p
+  |下記コマンドでセットアップ用のソースコードを取得します。
+  pre
+      | $ git clone https://github.com/SINDAN/sindan_docker.git
+
+  |下記ファイルのユーザー名とパスワードを設定します。
+  br
+  strong webui/seeds.rb
+  pre
+      | User.create(login: 'sindan', email: 'sindan-wg@wide.ad.jp', password: 'sindan-changethis')
+                                             ^^^^^^^^^^^^^^^^^^^^              ^^^^^^^^^^^^^^^^^ここを変更
+
+  |その後、コンテナの取得とセットアップを行います。
+  pre
+      | $ cd sindan_docker
+        $ ./build.sh
+  |コンテナの準備が終了後、必要なコンテナを立ち上げます。
+  pre $ ./start.sh
+  |コンテナを終了させる場合、下記コマンドを入力してください。
+  pre $ ./stop.sh
+
 h3#agent.page-header 診断ノードのセットアップ(Raspberry PI 版)
 
 h4#agent.page-header イメージ取得・書き込み
@@ -53,16 +75,25 @@ ul
   li
     | sindan.conf
     ul
-      li sindan.sh用の設定ファイル
+      li sindan.sh用の設定ファイル です。計測に使う WiFi インターフェースの名前と、診断結果のアップロード先を指定します。
+
+      pre
+         | # target interface
+           readonly IFTYPE=Wi-Fi
+           readonly DEVNAME=ra0 <-- (GW-450D / GW-450D2 ならこのまま)
+           # upload urls
+           readonly URL_CAMPAIGN="http://fluentd.c.u-tokyo.ac.jp:8888/sindan.log_campaign" <-- 収集・可視化サーバの URL を指定
+           readonly URL_SINDAN="http://fluentd.c.u-tokyo.ac.jp:8888/sindan.log" <-- 収集・可視化サーバの URL を指定
+
   li
     | wpa_supplicant.conf
     ul
-      li 測定する ssid の設定ファイルです。ファイル内の ssid と psk に設定してください。
+      li 測定する ssid の設定ファイルです。ファイル内の ssid と psk に設定します。linux 等の OS 上で、下記のコマンドを入力することで wpa_supplicant.conf を生成できます。コマンドを実行するとWiFiのパスフレーズを聞かれるので入力してください。
+      pre pi@raspberrypi:~ $ wpa_passphrase <接続先ssid>
   li
     | crontab
     ul
       li 初期状態では sindan のスクリプトは予期せぬ動作を防ぐためにコメントアウトされています。実際に使用する場合はコメントアウトを外してください。
-
 
 h2#agent.page-header ダウンロード
 
@@ -73,10 +104,6 @@ p
   | bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
 ul
   li
-    a href="./data/raspbian/sindan-20180119.img.zip" 2018/1/19版(New!)
+    a href="./data/raspbian/sindan-20210311.img.zip" 2021/3/11版(New!)
   li
-    a href="./data/raspbian/sindan-20171122.img.zip" 2017/11/22版
-  li
-    a href="./data/raspbian/sindan-20170906.img.zip" 2017/9/6版
-  li
-    a href="./data/raspbian/sindan-20170719.img.zip" 2017/7/19版
+    a href="./data/raspbian/sindan-camp2103.img.zip" WIDE CAMP用
