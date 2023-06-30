@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="SINDAN Project" name="description" />
+    <title>Products | SINDAN Project</title><link href="/stylesheets/bootstrap.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/jquery-2.2.0.min.js"></script><script src="/javascripts/bootstrap.js"></script><script src="/javascripts/all.js"></script>
+  </head>
+  <body class="products">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">SINDAN</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#background">Background</a>
+            </li>
+            <li>
+              <a href="#goal">Goal</a>
+            </li>
+            <li>
+              <a href="#achievement">Research achievement</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container"><h2 class="page-header" id="product_overview">
+  Overview
+</h2>
+<p>
+  Sindan システムはネットワーク状態の診断をする診断ノード、各診断ノードからの診断結果を収集し、結果を表示する収集・可視化サーバから構成されています。
+</p>
+<h2 class="page-header" id="agent">
+  診断ノード
+</h2>
+<p>
+  診断ノードは、下記のプラットフォームで動作します。
+</p>
+<ul>
+  <li>
+    Raspberry PI(ver.1 - ver.3)
+  </li>
+  <li>
+    Linux(Debian / Ubuntu)
+  </li>
+  <li>
+    Windows7/8/10(PowerShell 実行環境が必要です)
+  </li>
+  <li>
+    MacOS X
+  </li>
+  <li>
+    Android(開発中)
+  </li>
+</ul>
+<p>
+  Rasbperry PI版のソフトウェアは bootable イメージで、その他のプラットフォームでは実行型ファイルとして配布しています。
+</p>
+<h2 class="page-header" id="agent">
+  収集・可視化サーバ
+</h2>
+<p>
+  本システムはノードからの診断結果の受け渡しに fluentd を利用しています。収集した結果はサーバ上で蓄積され、結果を Web で確認することができます。
+</p>
+<p>
+  収集・可視化サーバは Linux 上で動作します。また、Docker コンテナも用意していますので、インストールすることなく利用することも可能です。
+</p>
+<h2 class="page-header" id="agent">
+  使い方
+</h2>
+<p>
+  システムの動作には収集・可視化サーバと、診断ノードの両方が必要です。
+</p>
+<h3 class="page-header" id="agent">
+  収集・可視化サーバのセットアップ(docker 版)
+</h3>
+<h4 class="page-header" id="agent">
+  ダウンロード
+</h4>
+<p>
+  下記コマンドでセットアップ用のソースコードを取得します。<pre>$ git clone https://github.com/SINDAN/sindan_docker.git</pre>下記ファイルのユーザー名とパスワードを設定します。<br /><strong>webui/seeds.rb</strong><pre>User.create(login: 'sindan', email: 'sindan-wg@wide.ad.jp', password: 'sindan-changethis')
+                                     ^^^^^^^^^^^^^^^^^^^^              ^^^^^^^^^^^^^^^^^ここを変更</pre>その後、コンテナの取得とセットアップを行います。<pre>$ cd sindan_docker
+$ ./build.sh</pre>コンテナの準備が終了後、必要なコンテナを立ち上げます。<pre>$ ./start.sh</pre>コンテナを終了させる場合、下記コマンドを入力してください。<pre>$ ./stop.sh</pre>
+</p>
+<h3 class="page-header" id="agent">
+  診断ノードのセットアップ(Raspberry PI 版)
+</h3>
+<h4 class="page-header" id="agent">
+  イメージ取得・書き込み
+</h4>
+<p>
+  下記ダウンロードリンクより Raspberry PI のイメージをダウンロードし、zip ファイルを解凍してください。書き込み用の SD カードを用意してください。最低でも 4G の容量が必要です。ダウンロードしたファイルを、bootable イメージを書き込めるツール等を利用して SD カードに書き込みをしてください。Windows であれば<a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>などが利用できます。
+</p>
+<h4 class="page-header" id="agent">
+  設定
+</h4>
+<p>
+  イメージを書き込んだ SD カードを確認すると、いくつかのフォルダが見えます。その中の /etc フォルダに設定ファイルがあります。
+</p>
+<ul>
+  <li>
+    sindan.conf
+    <ul>
+      <li>
+        sindan.sh用の設定ファイル です。計測に使う WiFi インターフェースの名前と、診断結果のアップロード先を指定します。
+      </li>
+      <pre># target interface
+readonly IFTYPE=Wi-Fi
+readonly DEVNAME=ra0 <-- (GW-450D / GW-450D2 ならこのまま)
+# upload urls
+readonly URL_CAMPAIGN="http://fluentd.c.u-tokyo.ac.jp:8888/sindan.log_campaign" <-- 収集・可視化サーバの URL を指定
+readonly URL_SINDAN="http://fluentd.c.u-tokyo.ac.jp:8888/sindan.log" <-- 収集・可視化サーバの URL を指定</pre>
+    </ul>
+  </li>
+  <li>
+    wpa_supplicant.conf
+    <ul>
+      <li>
+        測定する ssid の設定ファイルです。ファイル内の ssid と psk に設定します。linux 等の OS 上で、下記のコマンドを入力することで wpa_supplicant.conf を生成できます。コマンドを実行するとWiFiのパスフレーズを聞かれるので入力してください。
+      </li>
+      <pre>pi@raspberrypi:~ $ wpa_passphrase <接続先ssid></pre>
+    </ul>
+  </li>
+  <li>
+    crontab
+    <ul>
+      <li>
+        初期状態では sindan のスクリプトは予期せぬ動作を防ぐためにコメントアウトされています。実際に使用する場合はコメントアウトを外してください。
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2 class="page-header" id="agent">
+  ダウンロード
+</h2>
+<h3 class="page-header" id="agent">
+  収集・可視化サーバ Docker イメージ
+</h3>
+<h3 class="page-header" id="agent">
+  Raspberry PI bootable イメージ
+</h3>
+<p>
+  bootable image を書き込めるツール等を使い、Raspberry PI の SD カードにコピーしてください。
+</p>
+<ul>
+  <li>
+    <a href="./data/raspbian/sindan-20210311.img.zip">2021/3/11版(New!)</a>
+  </li>
+  <li>
+    <a href="./data/raspbian/sindan-camp2103.img.zip">WIDE CAMP用</a>
+  </li>
+</ul>
+    </div>
+    <footer>
+      <hr />
+      <p class="text-center">
+        &copy; 2016 SINDAN Project 
+      </p>
+    </footer>
+  </body>
+</html>
