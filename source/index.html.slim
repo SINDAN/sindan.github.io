@@ -38,7 +38,6 @@ ul
     | 変動するネットワーク障害検出の研究：クライアント端末における無線ネットワーク環境情報の取得手法を検討する。
 
 |  【参考文献】 
-
 table border="0"
   tbody
     tr
@@ -55,6 +54,8 @@ table border="0"
         | B. Aggarwal, R. Bhagwan, T. Das, S. Eswaran, V. Padmanabhan, and G. Voelker: "NetPrints: Diagnosing Home Network Misconfigurations Using Shared Knowledge", Proceedings of the 6th USENIX Symposium on Networked Systems Design and Implementation, April 2009.
 
 h2#goal.page-header Goal
+a href="./images/outline2.png"
+  == image_tag "outline2.png", align: "right", width: "600px"
 p
   |  本研究では、ユーザ環境においてネットワーク障害点を検出する手法を、それぞれのレイヤ毎に整理・確立し、迅速に把握できるシステムの研究を行う。特に今後利用が増すと考えるIPv4/IPv6デュアルスタック環境を評価対象とし、複雑なネットワークにおいても十分利用可能なものとする。 
 ul
@@ -90,101 +91,147 @@ ul
       li
         | 運用経験が豊富な技術者であれば気付くであろうネットワークにおける障害の兆候を自動的に検出する機能のシステム化に取り組む。
 
+h2#repository.page-header Repository
+table border="0"
+  tbody
+    tr
+      td
+        a href="https://github.com/SINDAN/sindan-client"
+          | sindan-client
+      td
+        | ユーザ視点におけるネットワーク状態を計測するクライアントアプリケーション。MacOS, Linux向けの計測スクリプト群として提供。計測結果はsindan-visualizationサーバに送信し可視化することができる。
+    tr
+      td
+        a href="https://github.com/SINDAN/sindan-visualization"
+          | sindan-visualization
+      td
+        | sindan-clientにて計測したデータを収集し、可視化を行うサーバアプリケーション。収集した計測データを計測単位（ログキャンペーン）にて詳細に確認することができる。
+    tr
+      td
+        a href="https://github.com/SINDAN/sindan-docker"
+          | sindn-docker
+      td
+        | sindan-visualizationやgrafanaによる可視化も含め、dockerにて構築するパッケージ。
+
 h2#achievement.page-header Research achievement
 table border="0"
   tbody
     tr
+      td
+          | [20]
+      td
+        | 北口 善明, 金 勇, 友石 正彦: キャンパスネットワーク運用自動化に向けた構成管理システムの実装と評価, 情報処理学会研究報告, Vol.2023-IOT-62, No.17, pp.1-6, July 2023.
+    tr
+      td
+        a href="http://id.nii.ac.jp/1001/00224832/"
+          | [19]
+      td
+        | 石原 知洋: Wi-Fi計測システムによるキャンパス無線LANの統計情報の分析, 情報処理学会研究報告, Vol.2023-IOT-60, No.1, pp.1-5, March 2023.
+    tr
       td 
-        | [19]
+        a href="http://id.nii.ac.jp/1001/00224832/"
+          | [18]
       td
         | 石原 知洋: Wi-Fi計測システムによるキャンパス無線LANの統計情報の分析, 情報処理学会研究報告, Vol.2023-IOT-60, No.1, pp.1-5, March 2023.
     tr
       td
-        | [18]
+        a href="http://id.nii.ac.jp/1001/00222631/"
+          | [17]
       td
         | 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: 802.11ax環境下における無線フレームキャプチャの検討, 情報処理学会 インターネットと運用技術シンポジウム (IOTS) 2022論文集, pp.25-30, December 2022.
     tr
       td
-        | [17]
+        a href="http://id.nii.ac.jp/1001/00220028/"
+          | [16]
       td
         | 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: 教室環境における802.11axおよび802.11acの性能調査, 情報処理学会研究報告, Vol.2022-IOT-59, No.10, pp.1-5, September 2022.
     tr
       td
-        | [16]
+        a href="http://id.nii.ac.jp/1001/00218695/"
+          | [15]
       td
         | 北口 善明, 金 勇, 友石 正彦: OSSを活用したキャンパスネットワークの構成管理システム, 情報処理学会研究報告, Vol.2022-IOT-58, No.16, pp.1-6, July 2022.
     tr
       td
-        | [15]
+        a href="http://id.nii.ac.jp/1001/00216667/"
+          | [14]
       td
         | 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: WebRTCを利用した動画配信利用時の無線LAN品質測定, 情報処理学会研究報告, Vol.2022-IOT-56, No.19, pp.1-6, March 2022.
     tr
       td
-        | [14]
+        a href="http://id.nii.ac.jp/1001/00216661/"
+          | [13]
       td
         | 新 麗, 豊田 安信, 北口 善明: ユーザ視点によるIPv6インターネット環境の調査, 情報処理学会研究報告, Vol.2022-IOT-56, No.13, pp.1-6, March 2022.
     tr
       td
-        | [13]
+        a href="http://id.nii.ac.jp/1001/00212074/"
+          | [12]
       td
         | 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: IoTコンピューティングデバイスを用いた低コストな無線LAN環境計測システム, 情報処理学会論文誌デジタルプラクティス (TDP), Vol.2, No.3, pp.1-10, July 2021.
     tr
       td
-        | [12]
+        a href="http://id.nii.ac.jp/1001/00209426/"
+          | [11]
       td
         | 石原 知洋, 北口 善明, 阿部 博: SINDANシステムを利用したコンテナプラットフォームにおけるネットワーク環境の計測, 情報処理学会研究報告, Vol.2021-IOT-52, No.33, pp.1-6, March 2021.
     tr
       td
-        | [11]
+        a href="http://id.nii.ac.jp/1001/00209425/"
+          | [10]
       td
         | 豊田 安信, 岩本 裕真, 加藤 良輔, 北口 善明, 中川 あきら, 永見 健一, 西野 大: 通信品質計測Webサービスを活用した日本のIPv6インターネット環境の分析と考察, 情報処理学会研究報告, Vol.2021-IOT-52, No.32, pp.1-6, March 2021.
     tr
       td
-        | [10]
+        a href="http://id.nii.ac.jp/1001/00200781/"
+          | [9]
       td
         | 淺葉 祥吾, 北口 善明, 石原 知洋, 高嶋 健人, 阿部 博, 篠田 陽一: センサデバイスを用いたローカルネットワークの負荷変化点検知, 情報処理学会 インターネットと運用技術シンポジウム (IOTS) 2019論文集 (poster), pp.118-119, December 2019.
     tr
       td
-        | [9]
+        a href="http://id.nii.ac.jp/1001/00191488/"
+          | [8]
       td
         | 北口 善明, 近堂 徹, 鈴田 伊知郎, 小林 貴之, 前野 譲二: クライアントOSのIPv6実装検証から見たネットワーク運用における課題の考察, 情報処理学会デジタルプラクティス, Vol.9, No.4, pp.902-922, October 2018.
     tr
       td
-        | [8]
+        a href="http://id.nii.ac.jp/1001/00193547/"
+          | [7]
       td
         | 淺葉 祥吾, 北口 善明, 石原 知洋, 高嶋 健人, 阿部 博, 篠田 陽一: 階層的ネットワーク計測における計測項目の相関分析, 情報処理学会 マルチメディア・分散・協調とモバイル (DICOMO) シンポジウム 2018 論文集, pp.1407-1412, July 2018.
     tr
       td
-        | [7]
+        a href="http://id.nii.ac.jp/1001/00190112/"
+          | [6]
       td
         | 北口 善明, 石原 知洋, 高嶋 健人: センサデバイスを利用したネットワーク状態計測手法の評価, 情報処理学会 マルチメディア・分散・協調とモバイル (DICOMO) シンポジウム 2017 論文集, pp.1348-1353, June 2017.
     tr
       td
-        | [6]
+        a href="http://id.nii.ac.jp/1001/00177714/"
+          | [5]
       td
         | 北口 善明, 近堂 徹, 鈴田 伊知郎, 小林 貴之, 前野 譲二: クライアントOSのIPv6実装検証とネットワーク運用における課題, 情報処理学会研究報告, Vol.2017-IOT-36, No.13, pp.1-8, March 2017.
     tr
       td
-        | [5]
+        a href="http://id.nii.ac.jp/1001/00176053/"
+          | [4]
       td
         | 新谷 隆文, 前田 香織, 北口 善明: MACフレーム情報を用いた無線LANの通信品質推定とネットワーク監視への応用, 情報処理学会 インターネットと運用技術シンポジウム (IOTS) 2016論文集, pp.26-32, December 2016.
     tr
       td
-        | [4]
+        a href="http://id.nii.ac.jp/1001/00145146/"
+          | [3]
       td
         | 北口 善明, 石原 知洋, 高嶋 健人: "IPv6時代におけるネットワーク状態評価手法の提案", 情報処理学会研究報告, Vol.2015-IOT-31, No.15, pp.1-6, September 2015.
     tr
       td
-        | [3]
-      td
-        | 北口 善明: "IPv6時代におけるネットワーク状態評価手法に関する研究", 第37回インターネット技術第163委員会研究会 RICC分科会, May 2015.
-    tr
-      td
-        | [2]
+        a href="http://id.nii.ac.jp/1001/00101241/"
+          | [2]
       td
         | 北口 善明, 石原 知洋, 高嶋 健人, 田川 真樹, 田中 晋太朗: "Raspberry Piを用いた無線ネットワーク状態評価手法の提案", 情報処理学会研究報告, Vol.2014-IOT-25, No.8, pp.1-6, May 2014.
     tr
       td
-        | [1]
+        a href="https://www.internetconference.org/ic2013/PDF/ic2013-poster09.pdf"
+          | [1]
       td
         | 田中 晋太朗, 田川 真樹, 高嶋 健人, 近藤 賢郎, 北口 善明: "Raspberry piを利用した無線ネットワーク状態評価システム", インターネットコンファレンス2013 (IC2013) 論文集 (ポスター発表), pp.139-140, October 2013.
