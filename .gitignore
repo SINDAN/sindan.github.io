@@ -1,5 +1,15 @@
+# jekyll
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Ignore bundler config.
+/.bundle
+vendor/bundle
+
+# Ignore .DS_store file
+.DS_Store
+*~
+*.swp
