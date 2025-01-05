@@ -1,4 +1,7 @@
 # README
+## Requirements
+* Ruby 3.3.6 (ref: [.ruby-version](.ruby-version) )
+
 ## Install
 - install gems
 
@@ -12,17 +15,18 @@ $ bundle install --path vendor/bundle
 
 - build
 ```
-$ bundle exec middleman build
+$ bundle exec jekyll build
 ```
 
 - launch local web server
+  - http://localhost:4000/
 ```
-$ bundle exec middleman server
+$ bundle exec jekyll server
 ```
 
 ## Deploy
 - deploy
-    - git push origin gh-pages
+    - GitHub Action: push `gh-pages` branch
 ```
-$ bundle exec middleman deploy
+$ git push origin master
 ```
