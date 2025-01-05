@@ -31,6 +31,18 @@ lang: ja
 plugins:
   - jekyll-feed
 
+header_links:
+  - title: About
+    url: "#about"
+  - title: Background
+    url: "#background"
+  - title: Goal
+    url: "#goal"
+  - title: Repository
+    url: "#repository"
+  - title: Research achievement
+    url: "#achievement"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
