@@ -1,17 +1,17 @@
 # README
 ## Requirements
-* Ruby 3.3.6 (ref: [.ruby-version](.ruby-version) )
+- Ruby 3.3.6 (ref: [.ruby-version](.ruby-version) )
+- Jekyll
 
 ## Install
 - install gems
-
 ```
 $ bundle install --path vendor/bundle
 ```
 
 ## Build & Test
 - edit content
-    - edit under source directory
+    - edit *.md (markdown format)
 
 - build
 ```
@@ -26,7 +26,12 @@ $ bundle exec jekyll server
 
 ## Deploy
 - deploy
-    - GitHub Action: push `gh-pages` branch
+    - GitHub Action (ref. [jekyll.yml](.github/workflows/jekyll.yml))
 ```
 $ git push origin master
 ```
+
+## Jekyll
+
+- Documents
+  - https://jekyllrb.com/docs/
