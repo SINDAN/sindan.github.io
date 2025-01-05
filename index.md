@@ -10,7 +10,7 @@ Simple Integrated Network Diagnosis And Notification
 
 
 ## About
-{: .page-header #about }
+{: .border-bottom .mb-3 .pb-1 #about }
 
 本プロジェクトは、ネットワーク障害点を検出するために、ユーザ側からの観測を元に状態を評価し、ネットワーク運用者が迅速に問題点を把握できる手法の確立を目的とする。 ネットワーク障害の原因を突き止めるためには、ユーザから寄せられる「つながらない」という状態を把握することが重要であるが、ユーザが的確に状態を評価し報告することは困難である。 
 
@@ -18,9 +18,9 @@ Simple Integrated Network Diagnosis And Notification
 
 
 ## Background
-{: .page-header #background }
+{: .border-bottom .mt-5 .mb-3 .pb-1 #background }
 
-[<img src="{{ "/assets/images/outline.png" | relative_url }}" alt="Outline" class="float-end" width="400px" style="max-width: 100%;" />]({{ "/assets/images/outline.png" | relative_url }})
+[<img src="{{ "/assets/images/outline.png" | relative_url }}" alt="Outline" class="float-end" style="width: 400px; max-width: 100%;" />]({{ "/assets/images/outline.png" | relative_url }})
 
 ネットワーク運用において、ユーザから「つながらない」というクレームを受ける場合がある。 このような「つながらない」状況の問題点を突き止める場合には、ユーザ側からのネットワーク観測が有効であるが、ユーザからは得てして「つながらない」という漠然とした状況しか得られないものである。 
 
@@ -44,9 +44,9 @@ Simple Integrated Network Diagnosis And Notification
 
 
 ## Goal
-{: .page-header #goal }
+{: .border-bottom .mt-5 .mb-3 .pb-1 #goal }
 
-[<img src="{{ "/assets/images/outline2.png" | relative_url }}" alt="Goal" class="float-end" width="600px" style="max-width: 100%;" />]({{ "/assets/images/outline2.png" | relative_url }})
+[<img src="{{ "/assets/images/outline2.png" | relative_url }}" alt="Goal" class="float-end" style="width: 600px; max-width: 100%;" />]({{ "/assets/images/outline2.png" | relative_url }})
 
 本研究では、ユーザ環境においてネットワーク障害点を検出する手法を、それぞれのレイヤ毎に整理・確立し、迅速に把握できるシステムの研究を行う。特に今後利用が増すと考えるIPv4/IPv6デュアルスタック環境を評価対象とし、複雑なネットワークにおいても十分利用可能なものとする。 
 
@@ -69,7 +69,7 @@ Simple Integrated Network Diagnosis And Notification
 
 
 ## Repository
-{: .page-header #repository }
+{: .border-bottom .mt-5 .mb-3 .pb-1 #repository }
 
 - [sindan-client](https://github.com/SINDAN/sindan-client)
   - ユーザ視点におけるネットワーク状態を計測するクライアントアプリケーション。MacOS, Linux向けの計測スクリプト群として提供。計測結果はsindan-visualizationサーバに送信し可視化することができる。
@@ -80,7 +80,7 @@ Simple Integrated Network Diagnosis And Notification
 
 
 ## Research achievement
-{: .page-header #achievement }
+{: .border-bottom .mt-5 .mb-3 .pb-1 #achievement }
 
 - [20] 北口 善明, 金 勇, 友石 正彦: キャンパスネットワーク運用自動化に向けた構成管理システムの実装と評価, 情報処理学会研究報告, Vol.2023-IOT-62, No.17, pp.1-6, July 2023.
 - [[19]](http://id.nii.ac.jp/1001/00224832/) 石原 知洋: Wi-Fi計測システムによるキャンパス無線LANの統計情報の分析, 情報処理学会研究報告, Vol.2023-IOT-60, No.1, pp.1-5, March 2023.
