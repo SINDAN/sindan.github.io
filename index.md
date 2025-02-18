@@ -82,8 +82,11 @@ Simple Integrated Network Diagnosis And Notification
 ## Research achievement
 {: .border-bottom .mt-5 .mb-3 .pb-1 #achievement }
 
-- [20] 北口 善明, 金 勇, 友石 正彦: キャンパスネットワーク運用自動化に向けた構成管理システムの実装と評価, 情報処理学会研究報告, Vol.2023-IOT-62, No.17, pp.1-6, July 2023.
-- [[19]](http://id.nii.ac.jp/1001/00224832/) 石原 知洋: Wi-Fi計測システムによるキャンパス無線LANの統計情報の分析, 情報処理学会研究報告, Vol.2023-IOT-60, No.1, pp.1-5, March 2023.
+- [[23]]() 石原 知洋, 北口 善明, 金子 直矢, 阿部 博: 再利用可能なSLAM地図を用いた無線LAN環境の自律ロボット測定, 情報処理学会研究報告, Vol.2025-IOT-68, No.xx, pp.1-6, March 2025.
+- [[22]](http://id.nii.ac.jp/1001/00234144/) 石原 知洋, 北口 善明: 無線LAN環境の品質分析のためのアクティブ・パッシブ複合計測手法, 情報処理学会研究報告, Vol.2024-IOT-65, No.24, pp.1-8, May 2024.
+- [[21]](https://www.ieice.org/publications/ken/summary.php?contribution_id=130460&society_cd=CS&ken_id=CS&year=2024&presen_date=2024-03-15&schedule_id=8020&lang=jp&expandable=1) 石原 知洋, 北口 善明, 金子 直矢, 阿部 博: 自律移動ロボットとSLAMを用いた屋内無線LAN環境の測定, 電子情報通信学会技術研究報告, Vol.123, No.439, CS2023-120, pp.88-94, March 2024.
+- [[20]](http://id.nii.ac.jp/1001/00232962/) 中野 龍太朗, 前田 香織, 髙野 知佐, 北口 善明, 豊田 安信: アクセス環境によるIPv4/IPv6インターネット通信品質への影響分析, 情報処理学会研究報告, Vol.2024-IOT-64, No.56, pp.1-6, March 2024.
+- [[19]](http://id.nii.ac.jp/1001/00226672/) 北口 善明, 金 勇, 友石 正彦: キャンパスネットワーク運用自動化に向けた構成管理システムの実装と評価, 情報処理学会研究報告, Vol.2023-IOT-62, No.17, pp.1-6, July 2023.
 - [[18]](http://id.nii.ac.jp/1001/00224832/) 石原 知洋: Wi-Fi計測システムによるキャンパス無線LANの統計情報の分析, 情報処理学会研究報告, Vol.2023-IOT-60, No.1, pp.1-5, March 2023.
 - [[17]](http://id.nii.ac.jp/1001/00222631/) 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: 802.11ax環境下における無線フレームキャプチャの検討, 情報処理学会 インターネットと運用技術シンポジウム (IOTS) 2022論文集, pp.25-30, December 2022.
 - [[16]](http://id.nii.ac.jp/1001/00220028/) 石原 知洋, 北口 善明, 阿部 博, 金子 直矢: 教室環境における802.11axおよび802.11acの性能調査, 情報処理学会研究報告, Vol.2022-IOT-59, No.10, pp.1-5, September 2022.
