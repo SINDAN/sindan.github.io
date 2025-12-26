@@ -1,6 +1,6 @@
 # README
 ## Requirements
-- Ruby 3.3.6 (ref: [.ruby-version](.ruby-version) )
+- Ruby 3.4.8 (ref: [.ruby-version](.ruby-version) )
 - Jekyll
 
 ## Install
